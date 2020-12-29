@@ -1,59 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.example.edittext.MyEditText
+    <data>
+
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:hint="Simple text"
-        app:hintColor="@color/black"
-        app:inputType="text"
-        app:textColor="@color/black"
-        app:textSize="20sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <com.example.edittext.MyEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:hint="Phone number"
-        app:hintColor="@color/black"
-        app:inputType="phone"
-        app:textColor="@color/black" />
+        <com.example.edittext.MyToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="3dp"
+            app:title="@string/no_result_found" />
 
-    <com.example.edittext.MyEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:hint="Password"
-        app:hintColor="@color/black"
-        app:inputType="textPassword"
-        app:textColor="@color/black" />
+        <androidx.appcompat.widget.Toolbar
+            style="@style/MyToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="@string/search_hint" />
 
-    <com.example.edittext.MyEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:hint="Text"
-        app:hintColor="@color/black"
-        app:minLines="3"
-        app:maxLines="6"
-        app:text="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\"
-        app:textColor="@color/black" />
+        <com.example.edittext.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:hint="Simple text"
+            app:hintColor="@color/black"
+            app:inputType="text"
+            app:textColor="@color/black"
+            app:textSize="20sp" />
 
-    <com.example.edittext.MyEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:hint="Text2"
-        app:hintColor="@color/black"
-        app:singleLine="true"
-        app:textColor="@color/black" />
+        <com.example.edittext.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:hint="Phone number"
+            app:hintColor="@color/black"
+            app:inputType="phone"
+            app:textColor="@color/black" />
+
+        <com.example.edittext.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:hint="Password"
+            app:hintColor="@color/black"
+            app:inputType="textPassword"
+            app:textColor="@color/black" />
+
+        <com.example.edittext.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:hint="Text"
+            app:hintColor="@color/black"
+            app:maxLines="6"
+            app:minLines="3"
+            app:textColor="@color/black" />
+
+        <com.example.edittext.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:hint="Text2"
+            app:hintColor="@color/black"
+            app:singleLine="true"
+            app:textColor="@color/black" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
