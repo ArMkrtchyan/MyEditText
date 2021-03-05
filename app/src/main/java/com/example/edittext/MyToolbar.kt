@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.example.edittext.databinding.LayoutToolbarBinding
 
 class MyToolbar @JvmOverloads constructor(
@@ -19,6 +20,8 @@ class MyToolbar @JvmOverloads constructor(
             layoutParams
         )
         mBinding.title.text = incomingValues.getString(R.styleable.MyToolbar_title)
+        (context as AppCompatActivity).setSupportActionBar(mBinding.root)
+        context.supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     fun getRoot(): androidx.appcompat.widget.Toolbar {

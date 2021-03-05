@@ -7,74 +7,38 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <com.example.edittext.MyToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            android:elevation="3dp"
-            app:title="@string/no_result_found" />
 
-        <androidx.appcompat.widget.Toolbar
-            style="@style/MyToolbarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_back"
-            app:title="@string/search_hint" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bcg_black_roundend_10"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="4dp"
+            android:text="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/progress"
+            app:layout_constraintEnd_toEndOf="@id/progress"
+            app:layout_constraintStart_toStartOf="@id/progress"
+            app:layout_constraintTop_toTopOf="@id/progress"
+            tools:text="00:21" />
 
-        <com.example.edittext.MyEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hint="Simple text"
-            app:hintColor="@color/black"
-            app:inputType="text"
-            app:textColor="@color/black"
-            app:textSize="20sp" />
-
-        <com.example.edittext.MyEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hint="Phone number"
-            app:hintColor="@color/black"
-            app:inputType="phone"
-            app:textColor="@color/black" />
-
-        <com.example.edittext.MyEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hint="Password"
-            app:hintColor="@color/black"
-            app:inputType="textPassword"
-            app:textColor="@color/black" />
-
-        <com.example.edittext.MyEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hint="Text"
-            app:hintColor="@color/black"
-            app:maxLines="6"
-            app:minLines="3"
-            app:textColor="@color/black" />
-
-        <com.example.edittext.MyEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:hint="Text2"
-            app:hintColor="@color/black"
-            app:singleLine="true"
-            app:textColor="@color/black" />
-
-
-    </LinearLayout>
+        <com.example.edittext.Progress
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
